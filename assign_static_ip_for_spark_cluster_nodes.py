@@ -18,7 +18,6 @@ else:
     p = subprocess.Popen(["aws", "emr", "list-clusters", "--active"], stdout=subprocess.PIPE)
     out, err = p.communicate()
 
-    print('here')
     out = out.decode("utf-8")
     out = json.loads(out)
 
@@ -28,7 +27,6 @@ else:
                          stdout=subprocess.PIPE)
     out2, err = p.communicate()
 
-    print('here22')
     out2 = out2.decode("utf-8")
     print(out2)
     id_list = []
